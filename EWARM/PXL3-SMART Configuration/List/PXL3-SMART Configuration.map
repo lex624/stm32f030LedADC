@@ -1,0 +1,360 @@
+###############################################################################
+#
+# IAR ELF Linker V8.40.1.212/W32 for ARM                  28/Aug/2020  16:04:58
+# Copyright 2007-2019 IAR Systems AB.
+#
+#    Output file  =
+#        C:\Users\misty\OneDrive\Desktop\Projects\Archive\START_HERE\PXL3-GLIDERITE_V4\EWARM\PXL3-SMART
+#        Configuration\Exe\PXL3-SMART Configuration.out
+#    Map file     =
+#        C:\Users\misty\OneDrive\Desktop\Projects\Archive\START_HERE\PXL3-GLIDERITE_V4\EWARM\PXL3-SMART
+#        Configuration\List\PXL3-SMART Configuration.map
+#    Command line =
+#        -f C:\Users\misty\AppData\Local\Temp\EW97A6.tmp
+#        ("C:\Users\misty\OneDrive\Desktop\Projects\Archive\START_HERE\PXL3-GLIDERITE_V4\EWARM\PXL3-SMART
+#        Configuration\Obj\gpio.o"
+#        "C:\Users\misty\OneDrive\Desktop\Projects\Archive\START_HERE\PXL3-GLIDERITE_V4\EWARM\PXL3-SMART
+#        Configuration\Obj\main.o"
+#        "C:\Users\misty\OneDrive\Desktop\Projects\Archive\START_HERE\PXL3-GLIDERITE_V4\EWARM\PXL3-SMART
+#        Configuration\Obj\startup_stm32f030x6.o"
+#        "C:\Users\misty\OneDrive\Desktop\Projects\Archive\START_HERE\PXL3-GLIDERITE_V4\EWARM\PXL3-SMART
+#        Configuration\Obj\stm32f0xx_hal.o"
+#        "C:\Users\misty\OneDrive\Desktop\Projects\Archive\START_HERE\PXL3-GLIDERITE_V4\EWARM\PXL3-SMART
+#        Configuration\Obj\stm32f0xx_hal_adc.o"
+#        "C:\Users\misty\OneDrive\Desktop\Projects\Archive\START_HERE\PXL3-GLIDERITE_V4\EWARM\PXL3-SMART
+#        Configuration\Obj\stm32f0xx_hal_cortex.o"
+#        "C:\Users\misty\OneDrive\Desktop\Projects\Archive\START_HERE\PXL3-GLIDERITE_V4\EWARM\PXL3-SMART
+#        Configuration\Obj\stm32f0xx_hal_dma.o"
+#        "C:\Users\misty\OneDrive\Desktop\Projects\Archive\START_HERE\PXL3-GLIDERITE_V4\EWARM\PXL3-SMART
+#        Configuration\Obj\stm32f0xx_hal_flash.o"
+#        "C:\Users\misty\OneDrive\Desktop\Projects\Archive\START_HERE\PXL3-GLIDERITE_V4\EWARM\PXL3-SMART
+#        Configuration\Obj\stm32f0xx_hal_flash_ex.o"
+#        "C:\Users\misty\OneDrive\Desktop\Projects\Archive\START_HERE\PXL3-GLIDERITE_V4\EWARM\PXL3-SMART
+#        Configuration\Obj\stm32f0xx_hal_gpio.o"
+#        "C:\Users\misty\OneDrive\Desktop\Projects\Archive\START_HERE\PXL3-GLIDERITE_V4\EWARM\PXL3-SMART
+#        Configuration\Obj\stm32f0xx_hal_msp.o"
+#        "C:\Users\misty\OneDrive\Desktop\Projects\Archive\START_HERE\PXL3-GLIDERITE_V4\EWARM\PXL3-SMART
+#        Configuration\Obj\stm32f0xx_hal_pwr.o"
+#        "C:\Users\misty\OneDrive\Desktop\Projects\Archive\START_HERE\PXL3-GLIDERITE_V4\EWARM\PXL3-SMART
+#        Configuration\Obj\stm32f0xx_hal_pwr_ex.o"
+#        "C:\Users\misty\OneDrive\Desktop\Projects\Archive\START_HERE\PXL3-GLIDERITE_V4\EWARM\PXL3-SMART
+#        Configuration\Obj\stm32f0xx_hal_rcc.o"
+#        "C:\Users\misty\OneDrive\Desktop\Projects\Archive\START_HERE\PXL3-GLIDERITE_V4\EWARM\PXL3-SMART
+#        Configuration\Obj\stm32f0xx_hal_rcc_ex.o"
+#        "C:\Users\misty\OneDrive\Desktop\Projects\Archive\START_HERE\PXL3-GLIDERITE_V4\EWARM\PXL3-SMART
+#        Configuration\Obj\stm32f0xx_it.o"
+#        "C:\Users\misty\OneDrive\Desktop\Projects\Archive\START_HERE\PXL3-GLIDERITE_V4\EWARM\PXL3-SMART
+#        Configuration\Obj\system_stm32f0xx.o" --redirect _Printf=_PrintfFull
+#        --redirect _Scanf=_ScanfFull --no_out_extension -o
+#        "C:\Users\misty\OneDrive\Desktop\Projects\Archive\START_HERE\PXL3-GLIDERITE_V4\EWARM\PXL3-SMART
+#        Configuration\Exe\PXL3-SMART Configuration.out" --map
+#        "C:\Users\misty\OneDrive\Desktop\Projects\Archive\START_HERE\PXL3-GLIDERITE_V4\EWARM\PXL3-SMART
+#        Configuration\List\PXL3-SMART Configuration.map" --config
+#        C:\Users\misty\OneDrive\Desktop\Projects\Archive\START_HERE\PXL3-GLIDERITE_V4\EWARM/stm32f030x6_flash.icf
+#        --semihosting --entry __iar_program_start --vfe --text_out locale)
+#
+###############################################################################
+
+*******************************************************************************
+*** RUNTIME MODEL ATTRIBUTES
+***
+
+CppFlavor       = *
+__SystemLibrary = DLib
+__dlib_version  = 6
+
+
+*******************************************************************************
+*** HEAP SELECTION
+***
+
+The basic heap was selected because no calls to memory allocation
+functions were found in the application outside of system library
+functions, and there are calls to deallocation functions in the
+application.
+
+
+*******************************************************************************
+*** PLACEMENT SUMMARY
+***
+
+"A0":  place at address 0x800'0000 { ro section .intvec };
+"P1":  place in [from 0x800'0000 to 0x800'7fff] { ro };
+define block CSTACK with size = 1K, alignment = 8 { };
+define block HEAP with size = 512, alignment = 8 { };
+"P2":  place in [from 0x2000'0000 to 0x2000'0fff] {
+          rw, block CSTACK, block HEAP };
+initialize by copy { rw };
+
+  Section            Kind         Address    Size  Object
+  -------            ----         -------    ----  ------
+"A0":                                        0xb0
+  .intvec            ro code   0x800'0000    0xb0  startup_stm32f030x6.o [1]
+                             - 0x800'00b0    0xb0
+
+"P1":                                      0x1e59
+  .text              ro code   0x800'00b0   0x8cc  stm32f0xx_hal_rcc.o [1]
+  .text              ro code   0x800'097c   0x496  main.o [1]
+  .text              ro code   0x800'0e12     0x2  startup_stm32f030x6.o [1]
+  .text              ro code   0x800'0e14     0xc  stm32f0xx_hal.o [1]
+  .text              ro code   0x800'0e20    0x24  stm32f0xx_hal.o [1]
+  .text              ro code   0x800'0e44    0x36  I32DivMod.o [3]
+  .text              ro code   0x800'0e7a     0x2  startup_stm32f030x6.o [1]
+  .text              ro code   0x800'0e7c    0x20  stm32f0xx_hal.o [1]
+  .text              ro code   0x800'0e9c    0xa0  gpio.o [1]
+  .text              ro code   0x800'0f3c   0x7e0  stm32f0xx_hal_adc.o [1]
+  .text              ro code   0x800'171c    0xe4  stm32f0xx_hal_cortex.o [1]
+  .text              ro code   0x800'1800   0x2bc  stm32f0xx_hal_gpio.o [1]
+  .text              ro code   0x800'1abc     0x2  IntDivZer.o [3]
+  .text              ro code   0x800'1abe     0x2  startup_stm32f030x6.o [1]
+  .text              ro code   0x800'1ac0    0x64  stm32f0xx_hal_msp.o [1]
+  .rodata            const     0x800'1b24    0x88  stm32f0xx_hal_cortex.o [1]
+  .rodata            const     0x800'1bac    0x84  stm32f0xx_hal_adc.o [1]
+  .rodata            const     0x800'1c30    0x84  stm32f0xx_hal_gpio.o [1]
+  .rodata            const     0x800'1cb4    0x84  stm32f0xx_hal_rcc.o [1]
+  .text              ro code   0x800'1d38    0x60  system_stm32f0xx.o [1]
+  .text              ro code   0x800'1d98    0x3c  packbits_init_single.o [3]
+  .text              ro code   0x800'1dd4    0x34  stm32f0xx_it.o [1]
+  .text              ro code   0x800'1e08    0x10  stm32f0xx_hal.o [1]
+  .text              ro code   0x800'1e18    0x28  data_init.o [3]
+  .iar.init_table    const     0x800'1e40    0x10  - Linker created -
+  .text              ro code   0x800'1e50    0x1e  cmain.o [3]
+  .text              ro code   0x800'1e6e     0x4  low_level_init.o [2]
+  .text              ro code   0x800'1e72     0x8  exit.o [2]
+  .text              ro code   0x800'1e7a     0x2  startup_stm32f030x6.o [1]
+  .text              ro code   0x800'1e7c     0xa  cexit.o [3]
+  .text              ro code   0x800'1e86     0x2  startup_stm32f030x6.o [1]
+  .text              ro code   0x800'1e88    0x14  exit.o [4]
+  .text              ro code   0x800'1e9c    0x10  startup_stm32f030x6.o [1]
+  .text              ro code   0x800'1eac     0xc  cstartup_M.o [3]
+  .text              ro code   0x800'1eb8     0x2  startup_stm32f030x6.o [1]
+  .text              ro code   0x800'1eba     0x2  startup_stm32f030x6.o [1]
+  .text              ro code   0x800'1ebc     0x2  startup_stm32f030x6.o [1]
+  .text              ro code   0x800'1ebe     0x2  startup_stm32f030x6.o [1]
+  .text              ro code   0x800'1ec0     0x2  startup_stm32f030x6.o [1]
+  .text              ro code   0x800'1ec2     0x2  startup_stm32f030x6.o [1]
+  .text              ro code   0x800'1ec4     0x2  startup_stm32f030x6.o [1]
+  .text              ro code   0x800'1ec6     0x2  startup_stm32f030x6.o [1]
+  .text              ro code   0x800'1ec8     0x2  startup_stm32f030x6.o [1]
+  .text              ro code   0x800'1eca     0x2  startup_stm32f030x6.o [1]
+  .text              ro code   0x800'1ecc     0x2  startup_stm32f030x6.o [1]
+  .text              ro code   0x800'1ece     0x2  startup_stm32f030x6.o [1]
+  .text              ro code   0x800'1ed0     0x2  startup_stm32f030x6.o [1]
+  .text              ro code   0x800'1ed2     0x2  startup_stm32f030x6.o [1]
+  .text              ro code   0x800'1ed4     0x2  startup_stm32f030x6.o [1]
+  .text              ro code   0x800'1ed6     0x2  startup_stm32f030x6.o [1]
+  .text              ro code   0x800'1ed8     0x2  startup_stm32f030x6.o [1]
+  .rodata            const     0x800'1eda     0x0  packbits_init_single.o [3]
+  Initializer bytes  const     0x800'1eda    0x2f  <for P2-1>
+                             - 0x800'1f09  0x1e59
+
+"P2", part 1 of 2:                           0xa0
+  P2-1                        0x2000'0000    0xa0  <Init block>
+    .data            inited   0x2000'0000    0x84  main.o [1]
+    .data            inited   0x2000'0084     0x4  main.o [1]
+    .data            inited   0x2000'0088    0x14  system_stm32f0xx.o [1]
+    .bss             inited   0x2000'009c     0x4  stm32f0xx_hal.o [1]
+                            - 0x2000'00a0    0xa0
+
+"P2", part 2 of 2:                          0x400
+  CSTACK                      0x2000'00a0   0x400  <Block>
+    CSTACK           uninit   0x2000'00a0   0x400  <Block tail>
+                            - 0x2000'04a0   0x400
+
+Unused ranges:
+
+         From           To    Size
+         ----           --    ----
+   0x800'1f09   0x800'7fff  0x60f7
+  0x2000'04a0  0x2000'0fff   0xb60
+
+
+*******************************************************************************
+*** INIT TABLE
+***
+
+          Address      Size
+          -------      ----
+Copy/packbits (__iar_packbits_init_single3)
+    1 source range, total size 0x2f (29% of destination):
+           0x800'1eda  0x2f
+    1 destination range, total size 0xa0:
+          0x2000'0000  0xa0
+
+
+
+*******************************************************************************
+*** MODULE SUMMARY
+***
+
+    Module                  ro code  ro data  rw data
+    ------                  -------  -------  -------
+command line/config:
+    -------------------------------------------------
+    Total:
+
+C:\Users\misty\OneDrive\Desktop\Projects\Archive\START_HERE\PXL3-GLIDERITE_V4\EWARM\PXL3-SMART Configuration\Obj: [1]
+    gpio.o                      160
+    main.o                    1'174       39      136
+    startup_stm32f030x6.o       236
+    stm32f0xx_hal.o              96        2        4
+    stm32f0xx_hal_adc.o       2'016      132
+    stm32f0xx_hal_cortex.o      228      136
+    stm32f0xx_hal_gpio.o        700      132
+    stm32f0xx_hal_msp.o         100
+    stm32f0xx_hal_rcc.o       2'252      132
+    stm32f0xx_it.o               52
+    system_stm32f0xx.o           96        6       20
+    -------------------------------------------------
+    Total:                    7'110      579      160
+
+dl6M_tlf.a: [2]
+    exit.o                        8
+    low_level_init.o              4
+    -------------------------------------------------
+    Total:                       12
+
+rt6M_tl.a: [3]
+    I32DivMod.o                  54
+    IntDivZer.o                   2
+    cexit.o                      10
+    cmain.o                      30
+    cstartup_M.o                 12
+    data_init.o                  40
+    packbits_init_single.o       60
+    -------------------------------------------------
+    Total:                      208
+
+shb_l.a: [4]
+    exit.o                       20
+    -------------------------------------------------
+    Total:                       20
+
+    Linker created                        16    1'024
+-----------------------------------------------------
+    Grand Total:              7'350      595    1'184
+
+
+*******************************************************************************
+*** ENTRY LIST
+***
+
+Entry                       Address   Size  Type      Object
+-----                       -------   ----  ----      ------
+.iar.init_table$$Base    0x800'1e40          --   Gb  - Linker created -
+.iar.init_table$$Limit   0x800'1e50          --   Gb  - Linker created -
+?main                    0x800'1e51         Code  Gb  cmain.o [3]
+ACTIVE                  0x2000'0003    0x1  Data  Gb  main.o [1]
+ADC_ConversionStop       0x800'16a3   0x60  Code  Lc  stm32f0xx_hal_adc.o [1]
+ADC_Disable              0x800'1641   0x62  Code  Lc  stm32f0xx_hal_adc.o [1]
+ADC_Enable               0x800'15c5   0x76  Code  Lc  stm32f0xx_hal_adc.o [1]
+AHBPrescTable           0x2000'0088   0x10  Data  Gb  system_stm32f0xx.o [1]
+Backlight_Decrement      0x800'0dc5   0x10  Code  Gb  main.o [1]
+CSTACK$$Base            0x2000'00a0          --   Gb  - Linker created -
+CSTACK$$Limit           0x2000'04a0          --   Gb  - Linker created -
+EXTI2_3_IRQHandler       0x800'1dff    0xa  Code  Gb  stm32f0xx_it.o [1]
+EXTI4_15_IRQHandler      0x800'1ded   0x12  Code  Gb  stm32f0xx_it.o [1]
+HAL_ADC_ConfigChannel    0x800'13cd  0x1ce  Code  Gb  stm32f0xx_hal_adc.o [1]
+HAL_ADC_GetValue         0x800'13a1   0x1e  Code  Gb  stm32f0xx_hal_adc.o [1]
+HAL_ADC_Init             0x800'0f3d  0x2a4  Code  Gb  stm32f0xx_hal_adc.o [1]
+HAL_ADC_MspInit          0x800'1ae3   0x3a  Code  Gb  stm32f0xx_hal_msp.o [1]
+HAL_ADC_PollForConversion
+                         0x800'12ad   0xd4  Code  Gb  stm32f0xx_hal_adc.o [1]
+HAL_ADC_Start            0x800'11e9   0x6e  Code  Gb  stm32f0xx_hal_adc.o [1]
+HAL_ADC_Stop             0x800'1257   0x4c  Code  Gb  stm32f0xx_hal_adc.o [1]
+HAL_GPIO_EXTI_Callback   0x800'0ce9   0x76  Code  Gb  main.o [1]
+HAL_GPIO_EXTI_IRQHandler
+                         0x800'1a97   0x14  Code  Gb  stm32f0xx_hal_gpio.o [1]
+HAL_GPIO_Init            0x800'1801  0x248  Code  Gb  stm32f0xx_hal_gpio.o [1]
+HAL_GPIO_ReadPin         0x800'1a79   0x1e  Code  Gb  stm32f0xx_hal_gpio.o [1]
+HAL_GetTick              0x800'0e15    0xc  Code  Wk  stm32f0xx_hal.o [1]
+HAL_IncTick              0x800'1e09   0x10  Code  Wk  stm32f0xx_hal.o [1]
+HAL_Init                 0x800'0e7d   0x1a  Code  Gb  stm32f0xx_hal.o [1]
+HAL_InitTick             0x800'0e21   0x24  Code  Wk  stm32f0xx_hal.o [1]
+HAL_MspInit              0x800'1ac1   0x22  Code  Gb  stm32f0xx_hal_msp.o [1]
+HAL_NVIC_EnableIRQ       0x800'1773   0x1c  Code  Gb  stm32f0xx_hal_cortex.o [1]
+HAL_NVIC_SetPriority     0x800'1757   0x1c  Code  Gb  stm32f0xx_hal_cortex.o [1]
+HAL_RCC_ClockConfig      0x800'0629  0x28e  Code  Gb  stm32f0xx_hal_rcc.o [1]
+HAL_RCC_GetHCLKFreq      0x800'0919   0x1c  Code  Gb  stm32f0xx_hal_rcc.o [1]
+HAL_RCC_GetSysClockFreq
+                         0x800'08d9   0x3a  Code  Gb  stm32f0xx_hal_rcc.o [1]
+HAL_RCC_GetSysClockFreq::aPLLMULFactorTable
+                         0x800'095c   0x10  Data  Lc  stm32f0xx_hal_rcc.o [1]
+HAL_RCC_GetSysClockFreq::aPredivFactorTable
+                         0x800'096c   0x10  Data  Lc  stm32f0xx_hal_rcc.o [1]
+HAL_RCC_OscConfig        0x800'00b1  0x55c  Code  Gb  stm32f0xx_hal_rcc.o [1]
+HAL_SYSTICK_CLKSourceConfig
+                         0x800'17b7   0x2a  Code  Gb  stm32f0xx_hal_cortex.o [1]
+HAL_SYSTICK_Callback     0x800'0c99   0x4a  Code  Gb  main.o [1]
+HAL_SYSTICK_Callback::powerIndicatorCntTimer
+                        0x2000'0084    0x4  Data  Lc  main.o [1]
+HAL_SYSTICK_Config       0x800'178f   0x28  Code  Gb  stm32f0xx_hal_cortex.o [1]
+HAL_SYSTICK_IRQHandler   0x800'17f9    0x8  Code  Gb  stm32f0xx_hal_cortex.o [1]
+MX_GPIO_Init             0x800'0e9d   0xa0  Code  Gb  gpio.o [1]
+NVIC_SetPriority         0x800'171d   0x3a  Code  Lc  stm32f0xx_hal_cortex.o [1]
+PowerOnButton_Decrement
+                         0x800'0dd5   0x10  Code  Gb  main.o [1]
+RGB1_SETUP               0x800'097d   0x46  Code  Gb  main.o [1]
+Region$$Table$$Base      0x800'1e40          --   Gb  - Linker created -
+Region$$Table$$Limit     0x800'1e50          --   Gb  - Linker created -
+STATUS_GREEN            0x2000'0068    0x4  Data  Gb  main.o [1]
+SW2_Count               0x2000'0001    0x1  Data  Gb  main.o [1]
+SWITCH1_BLUE            0x2000'006c    0x4  Data  Gb  main.o [1]
+SWITCH1_GREEN           0x2000'0070    0x4  Data  Gb  main.o [1]
+SWITCH2_GREEN           0x2000'0074    0x4  Data  Gb  main.o [1]
+SWITCH3_BLUE            0x2000'0078    0x4  Data  Gb  main.o [1]
+SWITCH3_GREEN           0x2000'007c    0x4  Data  Gb  main.o [1]
+SysTick_Handler          0x800'1dd5   0x18  Code  Gb  stm32f0xx_it.o [1]
+SystemClock_Config       0x800'0d65   0x50  Code  Gb  main.o [1]
+SystemCoreClock         0x2000'0098    0x4  Data  Gb  system_stm32f0xx.o [1]
+SystemInit               0x800'1d39   0x48  Code  Gb  system_stm32f0xx.o [1]
+TimingDelay             0x2000'0080    0x4  Data  Lc  main.o [1]
+TimingDelay_Decrement    0x800'0db5   0x10  Code  Gb  main.o [1]
+__ICFEDIT_region_RAM_end__ {Abs}
+                        0x2000'0fff         Data  Gb  <internal module>
+__ICFEDIT_region_RAM_start__ {Abs}
+                        0x2000'0000         Data  Gb  <internal module>
+__aeabi_idiv0            0x800'1abd         Code  Gb  IntDivZer.o [3]
+__cmain                  0x800'1e51         Code  Gb  cmain.o [3]
+__exit                   0x800'1e89   0x14  Code  Gb  exit.o [4]
+__iar_data_init3         0x800'1e19   0x28  Code  Gb  data_init.o [3]
+__iar_packbits_init_single3
+                         0x800'1d99   0x3c  Code  Gb  packbits_init_single.o [3]
+__iar_program_start      0x800'1ead         Code  Gb  cstartup_M.o [3]
+__iar_small_uidiv        0x800'0e45         Code  Gb  I32DivMod.o [3]
+__iar_small_uidivmod     0x800'0e45         Code  Gb  I32DivMod.o [3]
+__low_level_init         0x800'1e6f    0x4  Code  Gb  low_level_init.o [2]
+__vector_table           0x800'0000         Data  Gb  startup_stm32f030x6.o [1]
+_call_main               0x800'1e5d         Code  Gb  cmain.o [3]
+_exit                    0x800'1e7d         Code  Gb  cexit.o [3]
+_main                    0x800'1e6b         Code  Gb  cmain.o [3]
+aAPBAHBPrescTable        0x800'094c   0x10  Data  Gb  stm32f0xx_hal_rcc.o [1]
+assert_failed            0x800'0e11    0x2  Code  Gb  main.o [1]
+backlight_timer         0x2000'0058    0x4  Data  Gb  main.o [1]
+batteryLEDLevelUpdate    0x800'0c31   0x5e  Code  Gb  main.o [1]
+battery_count           0x2000'0064    0x4  Data  Gb  main.o [1]
+buttonWasActive         0x2000'0002    0x1  Data  Gb  main.o [1]
+exit                     0x800'1e73    0x8  Code  Gb  exit.o [2]
+hadc                    0x2000'000c   0x4c  Data  Gb  main.o [1]
+i                       0x2000'0000    0x1  Data  Gb  main.o [1]
+main                     0x800'09c3  0x268  Code  Gb  main.o [1]
+powerIndicatorStatus    0x2000'0060    0x4  Data  Gb  main.o [1]
+powerOnButton_timer     0x2000'005c    0x4  Data  Gb  main.o [1]
+powerStatus             0x2000'0004    0x1  Data  Gb  main.o [1]
+setLedStatus            0x2000'0006    0x2  Data  Gb  main.o [1]
+uwTick                  0x2000'009c    0x4  Data  Lc  stm32f0xx_hal.o [1]
+v12_v24                 0x2000'0008    0x2  Data  Gb  main.o [1]
+val                     0x2000'000a    0x2  Data  Gb  main.o [1]
+
+
+[1] = C:\Users\misty\OneDrive\Desktop\Projects\Archive\START_HERE\PXL3-GLIDERITE_V4\EWARM\PXL3-SMART Configuration\Obj
+[2] = dl6M_tlf.a
+[3] = rt6M_tl.a
+[4] = shb_l.a
+
+  7'350 bytes of readonly  code memory
+    595 bytes of readonly  data memory
+  1'184 bytes of readwrite data memory
+
+Errors: none
+Warnings: none
